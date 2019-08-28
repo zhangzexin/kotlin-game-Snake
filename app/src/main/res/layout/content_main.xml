@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.example.game.SnakePanelView
+            android:id="@+id/v_snakepanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"/>
+
+    <Button
+            android:id="@+id/left"
+            android:layout_width="73dp"
+            android:layout_height="55dp"
+            android:text="Left" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="80dp" android:layout_marginStart="80dp" android:layout_marginBottom="124dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/top"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.047"/>
+    <Button
+            android:id="@+id/right"
+            android:layout_width="73dp"
+            android:layout_height="55dp"
+            android:text="right" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="60dp" android:layout_marginRight="60dp" android:layout_marginBottom="128dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/top"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <Button
+            android:id="@+id/top"
+            android:layout_width="73dp"
+            android:layout_height="55dp"
+            android:text="TOP" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="156dp"
+            app:layout_constraintBottom_toBottomOf="@+id/v_snakepanel" app:layout_constraintHorizontal_bias="0.538"/>
+
+    <Button
+            android:id="@+id/bottom"
+            android:layout_width="73dp"
+            android:layout_height="55dp"
+            android:text="BOTTOM"
+            android:layout_marginTop="48dp" app:layout_constraintTop_toBottomOf="@+id/top"
+            app:layout_constraintEnd_toStartOf="@+id/right"
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            app:layout_constraintStart_toEndOf="@+id/left" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.74"/>
+
+</android.support.constraint.ConstraintLayout>
